@@ -14,7 +14,6 @@ Movie.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
     },
     id: {
       type: DataTypes.STRING,
@@ -29,8 +28,8 @@ Movie.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gallery',
+    modelName: 'movie',
   }
 );
 
-module.exports = Gallery;
+module.exports = Movie;
