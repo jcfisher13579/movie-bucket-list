@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Movie extends Model {}
 
@@ -8,7 +8,6 @@ Movie.init(
     title: {
       type: DataTypes.STRING,
       allowNull: false,
-      
     },
     rank: {
       type: DataTypes.INTEGER,
@@ -29,8 +28,8 @@ Movie.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'gallery',
+    modelName: "movie",
   }
 );
 
-module.exports = Gallery;
+module.exports = Movie;
