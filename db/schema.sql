@@ -1,10 +1,4 @@
-<<<<<<< HEAD
 DROP DATABASE IF EXISTS movies_db;
 CREATE DATABASE movies_db;
 
 
-=======
-DROP DATABASE IF EXISTS movie_db;
-
-CREATE DATABASE movie_db;
->>>>>>> d948c9e4f9cacd2ff0004e7758809f632685a479
