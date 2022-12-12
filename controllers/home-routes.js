@@ -4,14 +4,7 @@ const { Movie, Review } = require('../model');
 // GET all movies for homepage
 router.get('/', async (req, res) => {
   try {
-    // const dbMovieData = await Movie.findAll({
-    //   include: [
-    //     {
-    //       model: Review,
-    //       attributes: ['body' ],
-    //     },
-    //   ],
-    // });
+    const dbMovieData = await Movie.findAll();
 
     const movies = dbMovieData.map((Movie) =>
       Movie.get({ plain: true })
@@ -67,8 +60,10 @@ router.get('/Review/:movie_rank', async (req, res) => {
 // POST one Review
 router.post('/Review/:movie_rank', async (req, res) =>{
   try{
-    const newReview = '';
-  }catch(err){
+    const newReview = await Review.findByPk(req.params.body);
+    res.json(newReview);
+  }
+  catch(err){
     console.log(err);
     res.status(500).json(err)
   }
