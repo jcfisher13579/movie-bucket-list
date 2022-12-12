@@ -6,14 +6,15 @@ router.get('/', async (req, res) => {
   try {
     const dbMovieData = await Movie.findAll();
 
+    // Serialize data so the template can read it
     const movies = dbMovieData.map((Movie) =>
       Movie.get({ plain: true })
     );
     // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('homepage', {
-      movies,
-      loggedIn: req.session.loggedIn,
-    });
+    // res.render('homepage', {
+    //   movies,
+    //   loggedIn: req.session.loggedIn,
+    // });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -34,7 +35,7 @@ router.get('/Movie/:movie_rank', async (req, res) => {
       ],
     });
 
-    const Movie = dbMovieData.get({ plain: true });
+    const movies = dbMovieData.map((Movie)=>Movie.get({plain:true}))
     // Send over the 'loggedIn' session variable to the 'Movie' template
     res.render('Movie', { Movie, loggedIn: req.session.loggedIn });
   } catch (err) {
