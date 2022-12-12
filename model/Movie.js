@@ -23,14 +23,14 @@ Movie.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    hasSeenMovie:{
-      type:DataTypes.BOOLEAN,
-      allowNull:false,
-    },
-    hasReview:{
+    hasSeenMovie: {
       type: DataTypes.BOOLEAN,
-      allowNull:false,
-    }
+      allowNull: false,
+    },
+    hasReview: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+    },
   },
   {
     sequelize,
