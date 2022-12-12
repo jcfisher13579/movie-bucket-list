@@ -1,0 +1,29 @@
+{
+  "name": "project2-best-group",
+  "version": "1.0.0",
+  "description": "Project 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcfisher13579/project2-best-group.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcfisher13579/project2-best-group/issues"
+  },
+  "homepage": "https://github.com/jcfisher13579/project2-best-group#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.26.0"
+  }
+}
