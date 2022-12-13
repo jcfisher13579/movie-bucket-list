@@ -1,16 +1,14 @@
-const router = require('express').Router();
-const { Movie, Review } = require('../model');
+const router = require("express").Router();
+const { Movie, Review } = require("../model");
 
 // GET all movies for homepage
-router.get('/', async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const dbMovieData = await Movie.findAll();
 
-    const movies = dbMovieData.map((Movie) =>
-      Movie.get({ plain: true })
-    );
+    const movies = dbMovieData.map((Movie) => Movie.get({ plain: true }));
     // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('homepage', {
+    res.render("homepage", {
       movies,
       loggedIn: req.session.loggedIn,
     });
@@ -21,22 +19,21 @@ router.get('/', async (req, res) => {
 });
 
 // GET one Movie
-router.get('/Movie/:movie_rank', async (req, res) => {
+router.get("/Movie/:movie_rank", async (req, res) => {
   try {
     const dbMovieData = await Movie.findByPk(req.params.movie_rank, {
       include: [
         {
           model: Review,
-          attributes: [
-            'body',
-          ],
+          attributes: ["body"],
         },
       ],
     });
 
-    const Movie = dbMovieData.get({ plain: true });
+    const movies = dbMovieData.get({ plain: true });
+    console.log(movies);
     // Send over the 'loggedIn' session variable to the 'Movie' template
-    res.render('Movie', { Movie, loggedIn: req.session.loggedIn });
+    res.render("Movie", { Movie, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -44,13 +41,13 @@ router.get('/Movie/:movie_rank', async (req, res) => {
 });
 
 // GET one Review
-router.get('/Review/:movie_rank', async (req, res) => {
+router.get("/Review/:movie_rank", async (req, res) => {
   try {
     const dbReviewData = await Review.findByPk(req.params.movie_rank);
 
     const Review = dbReviewData.get({ plain: true });
     // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render('Review', { Review, loggedIn: req.session.loggedIn });
+    res.render("Review", { Review, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -58,26 +55,35 @@ router.get('/Review/:movie_rank', async (req, res) => {
 });
 
 // POST one Review
-router.post('/Review/:movie_rank', async (req, res) =>{
-  try{
+router.post("/Review/:movie_rank", async (req, res) => {
+  try {
     const newReview = await Review.findByPk(req.params.body);
     res.json(newReview);
-  }
-  catch(err){
+  } catch (err) {
     console.log(err);
-    res.status(500).json(err)
+    res.status(500).json(err);
   }
 });
 
 // Login route
-router.get('/login', (req, res) => {
+router.get("/login", (req, res) => {
   // If the user is already logged in, redirect to the homepage
   if (req.session.loggedIn) {
-    res.redirect('/');
+    res.redirect("/");
     return;
   }
   // Otherwise, render the 'login' template
-  res.render('login');
+  res.render("login");
+});
+
+router.get("/signup", (req, res) => {
+  // If the user is already logged in, redirect to the homepage
+  if (req.session.signup) {
+    res.redirect("/");
+    return;
+  }
+  // Otherwise, render the 'login' template
+  res.render("signup");
 });
 
 module.exports = router;
