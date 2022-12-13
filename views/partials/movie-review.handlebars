@@ -3,4 +3,17 @@
     <header>{{title}}</header>
     <img src="/images/{{movie.[0].image}}" alt="{{movie.[0].title}}">
   </a>
+  <div>
+    <input type="checkbox" id="watched" name="watched" value="movie.[0]">
+    <label for="vehicle1">Add to Watched?</label><br>
+    <input type="checkbox" id="willwatch" name="willwatch" value="movie.[0]">
+    <label for="vehicle2">Add to Watch List?</label><br>
+  </div>
+  <div> 
+    <form>
+        <label for="review">Review:</label><br>
+        <input type="text" id="mreview" name="mreview"><br>
+        <input type="submit" value="Submit">
+    </form>
+  </div>
 </section>
