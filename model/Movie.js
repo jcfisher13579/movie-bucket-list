@@ -25,11 +25,11 @@ Movie.init(
     },
     hasSeenMovie: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
+      allowNull: false,
     },
     hasReview: {
       type: DataTypes.BOOLEAN,
-      allowNull: true,
+      allowNull: false,
     },
   },
   {
