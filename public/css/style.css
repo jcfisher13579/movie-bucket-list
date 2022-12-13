@@ -21,7 +21,20 @@ a {
   font-size: medium;
 }
 
+nav {
+  text-align: center;
+}
 
+nav a {
+  padding: 12px 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  color: black;
+  background-color: gainsboro;
+}
 
 .card {
   margin: 20px;
@@ -42,7 +55,13 @@ a {
   background-color: gainsboro;
 }
 
-
+.review-card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double black;
+  border-radius: 10px;
+  background-color: gainsboro;
+}
 
 .button{
   cursor: pointer;
@@ -53,21 +72,3 @@ a {
 
 
 
-.movie-card {
-  display: inline-block;
-  width: 30%; 
-  align-content: center;
-}
-
-.movie-card div {
-margin: 0 auto;
-flex: 0 1 300px; 
-border: 7px double #182c23;
-border-radius: 10px;
-background-color: #e3e4e3;
-color: #182c23;
-width: 60%;
-height: 10%;
-padding: 10% 10%;
-
-}
