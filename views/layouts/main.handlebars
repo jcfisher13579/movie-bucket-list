@@ -12,12 +12,30 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="popcorn"></span>
-        <h1>🍿Bucket List Movies🍿</h1>
-      </h1>
-      <nav>
-        <!-- Conditionally render login or logout links -->
+       <nav>
+    <a href="/">Home</a>
+    {{#if loggedIn}}
+    <button id="logout" class="btn-no-style">Logout</button>
+    {{else}}
+    <a href="/login">Login</a>
+    {{/if}}
+  </nav>
+          <main>
+    <aside>
+      <h2><span role="img" aria-label="popcorn"></span>
+        <a>🍿Bucket List Movies🍿</a></h2>
+    </aside>
+    <div class="gallery">
+      {{{body}}}
+    </div>
+  </main>
+  {{#if loggedIn}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
+        {{!-- <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
         <a href="/profile">profile</a> |
         <button class="no-button" id="logout">logout</button>
@@ -41,4 +59,4 @@
   {{/if}}
 </body>
 
-</html>
+</html> --}}

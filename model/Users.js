@@ -16,9 +16,10 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
     },
     email: {
       type: DataTypes.STRING,
@@ -52,5 +53,3 @@ User.init(
 );
 
 module.exports = User;
-
-
