@@ -5,8 +5,7 @@ const moviedata = [
     title: "The Shawshank Redemption",
     rank: "1",
     id: "tt0111161",
-    image:
-      "https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/?ref_=tt_ov_i",
+    image:"https://www.imdb.com/title/tt0111161/mediaviewer/rm10105600/?ref_=tt_ov_i",
     hasSeenMovie: false,
     hasReview: false,
   },
