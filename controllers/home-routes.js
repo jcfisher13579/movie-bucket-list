@@ -5,6 +5,7 @@ const { Movie, Review } = require("../model");
 router.get("/", async (req, res) => {
   try {
     const dbMovieData = await Movie.findAll();
+    console.log(dbMovieData);
 
     const movies = dbMovieData.map((Movie) => Movie.get({ plain: true }));
     // Send over the 'loggedIn' session variable to the 'homepage' template
