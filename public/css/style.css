@@ -21,7 +21,21 @@ a {
   font-size: medium;
 }
 
+nav {
+  text-align: center;
+}
 
+nav a {
+  color: var(--light);
+  padding: 12px 18px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  color: black;
+  background-color: gainsboro;
+}
 
 .card {
   margin: 20px;
@@ -42,12 +56,12 @@ a {
   background-color: gainsboro;
 }
 
-
-
 .button{
   cursor: pointer;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   background-color: rgb(129, 195, 236);
   text-align: center;
 }
+
+
 
