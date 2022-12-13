@@ -26,7 +26,6 @@ nav {
 }
 
 nav a {
-  color: var(--light);
   padding: 12px 18px;
   text-decoration: none;
   text-align: center;
@@ -53,6 +52,14 @@ nav a:hover {
   border: 3px solid black;
   border-style: double;
   border-width: thick;
+  background-color: gainsboro;
+}
+
+.review-card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double black;
+  border-radius: 10px;
   background-color: gainsboro;
 }
 
