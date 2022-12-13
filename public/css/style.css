@@ -52,3 +52,22 @@ a {
 }
 
 
+
+.movie-card {
+  display: inline-block;
+  width: 30%; 
+  align-content: center;
+}
+
+.movie-card div {
+margin: 0 auto;
+flex: 0 1 300px; 
+border: 7px double #182c23;
+border-radius: 10px;
+background-color: #e3e4e3;
+color: #182c23;
+width: 60%;
+height: 10%;
+padding: 10% 10%;
+
+}
