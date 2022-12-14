@@ -32,7 +32,7 @@ router.get("/Movie/:movie_rank", async (req, res) => {
 
     const movies = dbMovieData.get({ plain: true });
     // Send over the 'loggedIn' session variable to the 'Movie' template
-    res.render("Movie", { movies, loggedIn: req.session.loggedIn });
+    res.render("movie", { movies, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -46,7 +46,7 @@ router.get("/Review/:movie_rank", async (req, res) => {
 
     const Review = dbReviewData.get({ plain: true });
     // Send over the 'loggedIn' session variable to the 'homepage' template
-    res.render("Review", { Review, loggedIn: req.session.loggedIn });
+    res.render("review", { Review, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
