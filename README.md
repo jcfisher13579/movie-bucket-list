@@ -13,21 +13,21 @@ N/A
 
 When you first load the application, you will be met with a login or signup screen.
 
-```md
+
 <img src="./assets/images/Screenshot%202022-12-14%20102418.png">
-```
+
 
 After loggin in or signing up, you will be brought to the homepage, where the top 50 movies are then listed. 
 
-```md
+
 <img src="./assets/images/Screenshot%202022-12-14%20102528.png">
-``` 
+ 
 
 When clicking on a movie that you wish to leave a review on, you are redirected to a new page that provides a form to review the movie. 
 
-```md
+
 <img src="./assets/images/Screenshot%202022-12-14%20102556.png">
-```
+
 
 ## Credits 
 
