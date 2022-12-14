@@ -5,7 +5,6 @@ const { Movie, Review } = require("../model");
 router.get("/", async (req, res) => {
   try {
     const dbMovieData = await Movie.findAll();
-    console.log(dbMovieData);
 
     const movies = dbMovieData.map((Movie) => Movie.get({ plain: true }));
     // Send over the 'loggedIn' session variable to the 'homepage' template
@@ -32,7 +31,6 @@ router.get("/Movie/:movie_rank", async (req, res) => {
     });
 
     const movies = dbMovieData.get({ plain: true });
-    console.log(movies);
     // Send over the 'loggedIn' session variable to the 'Movie' template
     res.render("Movie", { Movie, loggedIn: req.session.loggedIn });
   } catch (err) {
