@@ -32,7 +32,7 @@ router.get("/Movie/:movie_rank", async (req, res) => {
 
     const movies = dbMovieData.get({ plain: true });
     // Send over the 'loggedIn' session variable to the 'Movie' template
-    res.render("Movie", { Movie, loggedIn: req.session.loggedIn });
+    res.render("Movie", { movies, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
