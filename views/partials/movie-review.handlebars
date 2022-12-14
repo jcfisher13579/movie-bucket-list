@@ -1,13 +1,20 @@
 <section class="card">
   <a href="/movie/{{rank}}">
-    <header>{{title}}</header>
+    <header>
+      <h2>{{title}}</h2>
+    </header>
     <img src="{{movie.[0].image}}" alt="{{movie.[0].title}}">
   </a>
   <div>
     <input type="checkbox" id="watched" name="watched" value="movie.[0]">
-    <label for="vehicle1">Add to Watched?</label><br>
-    <input type="checkbox" id="willwatch" name="willwatch" value="movie.[0]">
-    <label for="vehicle2">Add to Watch List?</label><br>
+    <label for="vehicle1">Watched?</label><br>
+    <input type="checkbox" id="willwatch" name="reviewed" value="movie.[0]">
+    <label for="vehicle2">Reviewed?</label><br>
   </div>
+<<<<<<< HEAD
   
 </section>
+=======
+</section>
+<script src="/public/js/checkbox.js"></script>
+>>>>>>> 2e4cfb2ed3a27e0b0bd12d87d596b7756ed333ed
